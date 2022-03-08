@@ -344,10 +344,10 @@
       if (Web3.givenProvider) {
         if (!WEB3) {
           WEB3 = new Web3(Web3.givenProvider);
-          Web3.givenProvider.on('connect', () => resetWeb3(true));
-          Web3.givenProvider.on('disconnect', () => resetWeb3(true));
-          Web3.givenProvider.on('chainChanged', () => resetWeb3(true));
-          Web3.givenProvider.on('accountsChanged', () => resetWeb3(true));
+          Web3.givenProvider.on('connect', () => resetWeb3());
+          Web3.givenProvider.on('disconnect', () => resetWeb3());
+          Web3.givenProvider.on('chainChanged', () => resetWeb3());
+          Web3.givenProvider.on('accountsChanged', () => resetWeb3());
         }
         const accounts = await WEB3.eth.getAccounts();
         ACCOUNT = accounts[0];
