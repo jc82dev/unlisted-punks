@@ -7,15 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta content="width=device-width,initial-scale=1,maximum-scale=10,minimum-scale=.25,user-scalable=yes" name="viewport" />
     <meta content="text/html; charset=utf-8" httpEquiv="content-type" />
-    <!-- fonts -->
-    <link href="//fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <!-- css -->
-    <link href="//cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet">
-    <link href="/static/index.css" rel="stylesheet">
     <!-- preload -->
     <link rel="preload" as="image" href="/assets/img/sprites.png">
-    <!-- data -->
-    <script src="shared/common.shared.js"></script>
+    <!-- css (non blocking) -->
+    <style>html { background-color: #252525; overflow: hidden; } body { transition: opacity 0.2s linear; opacity: 0; }</style>
+    <link rel="stylesheet" href="static.min.css" media="none"  onload="if(media!='all')media='all'">
+    <!-- fonts -->
+    <link href="//fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   </head>
   <body>
     <div id="content">
@@ -130,8 +128,7 @@
         </div>
     </div>
     <!-- js -->
-    <script src="/static/index.js"></script>
-    <script src="/static/progress.js"></script>
     <script async src="//cdnjs.cloudflare.com/ajax/libs/web3/1.7.1-rc.0/web3.min.js" onload="window.onWeb3Loaded()"></script>
+    <script async src="static.min.js" onLoad=""></script>
   </body>
 </html>
