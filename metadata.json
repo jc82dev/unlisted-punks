@@ -1,0 +1,8 @@
+{
+  "name": "Unlisted Punks",
+  "description": "The 35.610.480 punks not included in the original collection",
+  "image": "https://unlistedpunks.com/assets/img/os/logo.gif",
+  "external_link": "https://unlistedpunks.com",
+  "seller_fee_basis_points": 500,
+  "fee_recipient": "0x52678E3BfCC41833F3D8629DBa43814A716B2eDC"
+}
